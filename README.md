@@ -1,2 +1,9 @@
 # smart-calc-privacy
-Smart Calc uygulaması için gizlilik politikası
+
+Smart Calc Gizlilik Politikası
+
+Smart Calc uygulaması hiçbir kişisel veri toplamaz, işlemez veya üçüncü şahıslarla paylaşmaz. Uygulama yalnızca cihazınızda çalışır ve verileriniz cihazınızda kalır.
+Kullanıcı ayarları ve geçmişi sadece cihazınızda saklanır, sunucuya gönderilmez.
+Uygulama, reklam veya analiz amacıyla hiçbir veri toplamaz.
+
+Herhangi bir sorunuz olursa lütfen bizimle iletişime geçin: [e-posta adresiniz]
