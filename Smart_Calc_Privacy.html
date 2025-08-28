@@ -3,45 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Calc Gizlilik Politikası</title>
+  <title>Smart Calc Gizlilik Politikası / Privacy Policy</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f4f6f8;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
+      animation: backgroundShift 15s infinite alternate;
+    }
+
+    @keyframes backgroundShift {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 100% 50%; }
     }
 
     .container {
       background: #ffffff;
       padding: 40px;
-      max-width: 700px;
+      max-width: 800px;
       width: 90%;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      line-height: 1.6;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      line-height: 1.7;
+      transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
     }
 
     h1 {
       text-align: center;
       color: #333333;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #1e88e5;
+      margin-top: 30px;
+      margin-bottom: 20px;
+      font-size: 22px;
     }
 
     p {
       color: #555555;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       font-size: 16px;
     }
 
     a {
       color: #1e90ff;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 500;
     }
 
     a:hover {
@@ -50,18 +70,35 @@
 
     .highlight {
       background-color: #f0f8ff;
-      padding: 5px 10px;
+      padding: 3px 8px;
       border-radius: 5px;
+      font-weight: 500;
+    }
+
+    .section {
+      margin-bottom: 30px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Smart Calc Gizlilik Politikası</h1>
-    <p>Smart Calc uygulaması <span class="highlight">hiçbir kişisel veri toplamaz, işlemez veya üçüncü şahıslarla paylaşmaz.</span> Uygulama yalnızca cihazınızda çalışır ve verileriniz cihazınızda kalır.</p>
-    <p>Kullanıcı ayarları ve geçmişi <span class="highlight">sadece cihazınızda saklanır, sunucuya gönderilmez.</span></p>
-    <p>Uygulama, <span class="highlight">reklam veya analiz amacıyla hiçbir veri toplamaz.</span></p>
-    <p>Herhangi bir sorunuz olursa lütfen bizimle iletişime geçin: <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></p>
+    <!-- Turkish Version -->
+    <div class="section">
+      <h1>Smart Calc Gizlilik Politikası</h1>
+      <p>Smart Calc uygulaması <span class="highlight">hiçbir kişisel veri toplamaz, işlemez veya üçüncü şahıslarla paylaşmaz.</span> Uygulama yalnızca cihazınızda çalışır ve verileriniz cihazınızda kalır.</p>
+      <p>Kullanıcı ayarları ve geçmişi <span class="highlight">sadece cihazınızda saklanır, sunucuya gönderilmez.</span></p>
+      <p>Uygulama, <span class="highlight">reklam veya analiz amacıyla hiçbir veri toplamaz.</span></p>
+      <p>Herhangi bir sorunuz olursa lütfen bizimle iletişime geçin: <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></p>
+    </div>
+
+    <!-- English Version -->
+    <div class="section">
+      <h2>Smart Calc Privacy Policy</h2>
+      <p>The Smart Calc app <span class="highlight">does not collect, process, or share any personal data.</span> The app operates only on your device, and your data stays on your device.</p>
+      <p>User settings and history are <span class="highlight">stored only on your device and are not sent to any server.</span></p>
+      <p>The app <span class="highlight">does not collect any data for advertising or analytics purposes.</span></p>
+      <p>If you have any questions, please contact us: <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></p>
+    </div>
   </div>
 </body>
 </html>
