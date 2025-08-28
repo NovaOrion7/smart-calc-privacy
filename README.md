@@ -6,4 +6,4 @@ Smart Calc uygulaması hiçbir kişisel veri toplamaz, işlemez veya üçüncü 
 Kullanıcı ayarları ve geçmişi sadece cihazınızda saklanır, sunucuya gönderilmez.
 Uygulama, reklam veya analiz amacıyla hiçbir veri toplamaz.
 
-Herhangi bir sorunuz olursa lütfen bizimle iletişime geçin: ismailsoylu0405@gmail.com
+Herhangi bir sorunuz olursa lütfen bizimle iletişime geçin: nova.orion.dev@gmail.com
