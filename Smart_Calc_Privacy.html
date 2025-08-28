@@ -7,61 +7,76 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
+    :root {
+      --light-bg: #f4f6f8;
+      --dark-bg: #121212;
+      --light-card: #ffffff;
+      --dark-card: #1e1e1e;
+      --highlight-light: #e0f7fa;
+      --highlight-dark: #37474f;
+      --text-light: #333333;
+      --text-dark: #e0e0e0;
+      --link-color: #1e90ff;
+    }
+
     body {
       font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #f1f8e9);
+      background: linear-gradient(-45deg, #e0f7fa, #f1f8e9, #fff3e0, #fce4ec);
+      background-size: 400% 400%;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      animation: backgroundShift 15s infinite alternate;
+      transition: background 0.5s;
+      animation: gradientShift 15s ease infinite;
     }
 
-    @keyframes backgroundShift {
+    @keyframes gradientShift {
       0% { background-position: 0% 50%; }
-      100% { background-position: 100% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
 
     .container {
-      background: #ffffff;
+      background: var(--light-card);
       padding: 40px;
       max-width: 800px;
       width: 90%;
-      border-radius: 16px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
       line-height: 1.7;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, background 0.5s, color 0.5s;
     }
 
     .container:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
-      color: #333333;
       margin-bottom: 25px;
+      font-weight: 700;
+      background: linear-gradient(90deg, #1e90ff, #ff6f61);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     h2 {
-      color: #1e88e5;
+      font-size: 24px;
       margin-top: 30px;
-      margin-bottom: 20px;
-      font-size: 22px;
     }
 
     p {
-      color: #555555;
-      margin-bottom: 18px;
       font-size: 16px;
+      margin-bottom: 18px;
     }
 
     a {
-      color: #1e90ff;
-      text-decoration: none;
+      color: var(--link-color);
       font-weight: 500;
+      text-decoration: none;
     }
 
     a:hover {
@@ -69,18 +84,58 @@
     }
 
     .highlight {
-      background-color: #f0f8ff;
-      padding: 3px 8px;
-      border-radius: 5px;
+      padding: 4px 10px;
+      border-radius: 6px;
       font-weight: 500;
+      background-color: var(--highlight-light);
+      transition: background 0.5s;
     }
 
     .section {
       margin-bottom: 30px;
     }
+
+    /* Dark mode */
+    body.dark-mode {
+      background: linear-gradient(-45deg, #1e1e1e, #121212, #263238, #37474f);
+    }
+
+    body.dark-mode .container {
+      background: var(--dark-card);
+      color: var(--text-dark);
+    }
+
+    body.dark-mode .highlight {
+      background-color: var(--highlight-dark);
+      color: #fff;
+    }
+
+    body.dark-mode a {
+      color: #4fc3f7;
+    }
+
+    .toggle-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 12px;
+      background: #1e90ff;
+      color: #fff;
+      font-weight: 500;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      transition: background 0.3s;
+    }
+
+    .toggle-btn:hover {
+      background: #1c86ee;
+    }
   </style>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
   <div class="container">
     <!-- Turkish Version -->
     <div class="section">
@@ -100,5 +155,13 @@
       <p>If you have any questions, please contact us: <a href="mailto:nova.orion.dev@gmail.com">nova.orion.dev@gmail.com</a></p>
     </div>
   </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const btn = document.querySelector('.toggle-btn');
+      btn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    }
+  </script>
 </body>
 </html>
